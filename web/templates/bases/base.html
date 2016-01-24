@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>抢票工具</title>
+
+    <link rel="stylesheet" href="{% static 'common/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'common/css/base.css' %}">
+    <script src="{% static 'common/js/jquery.min.js' %}"></script>
+    <script src="{% static 'common/js/bootstrap.min.js' %}"></script>
+    {% block extrahead %}
+    {% endblock %}
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        {% include 'bases/header.html' %}
+    </div>
+
+    <div class="row">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="row">
+        {% include 'bases/footer.html' %}
+    </div>
+</div>
+</body>
+</html>
